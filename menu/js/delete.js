@@ -1,5 +1,5 @@
-﻿$(function () {
-    var isSelectShowed = false;
+﻿(function () {
+    var isSelectShowed = true;
     $('#select').click(function () {
         if (isSelectShowed) {
             $('#sel-option').hide();

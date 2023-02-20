@@ -35,7 +35,11 @@ body {
     .trigger:hover {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     }
-
+.slideshow-menu-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
 /* Nav position and opening class */
 .full-screen-nav {
     position: absolute;
@@ -89,6 +93,7 @@ ul {
         ul li:last-child {
             margin-bottom: 0;
         }
+
 
 @keyframes animateList {
     from {
