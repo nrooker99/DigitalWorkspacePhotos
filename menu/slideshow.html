@@ -91,38 +91,37 @@
         }
     </style>
 
-    
+
 
     <div class="slideshow-container">
 
         <header>
+
            
-            <li>
-                <input type="file" id="file" webkitdirectory directory accept="folder image/jpg image/png" multiple />
-                <button   onclick=startImageSlideShow() class="fa-solid">Play</button>
-                <div id="output"</div>
-       
 
-                <script type="text/javascript">
-                    function go() {
-                        const fileInput = document.getElementById('file');
-                        const outputDiv = document.getElementById('output');
-                        let html = '';
-                        for (const file of fileInput.files) {
-                            html += '<img src="image/0.jpg' + file.name + '" />';
-                        }
-                        outputDiv.currentImageNumber += html;
-                    }
-                </script>
-            </li>
+                
 
-            <button> <a href="index.html"><i class="fa-solid fa-rotate-left"></i> Back </></button>
-        </header>
-       
 
-        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-        <img id="image" src="image/0.jpg" style="width: 800px; height: 650px" />
-        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+    <script type="text/javascript">
+        function go() {
+            const fileInput = document.getElementById('file');
+            const outputDiv = document.getElementById('output');
+            let html = '';
+            for (const file of fileInput.files) {
+                html += '<img src="image/0.jpg' + file.name + '" />';
+            }
+            outputDiv.currentImageNumber += html;
+        }
+    </script>
+    <button onclick=startImageSlideShow() class="fa-solid fa-arrow">Play</button>  
+    <button> <a href="index.html"><i class="fa-solid fa-rotate-left"></i> Back </></button>
+    </header>
+
+
+    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+    <img id="image" src="image/0.jpg" style="width: 800px; height: 650px" />
+    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 
     </div>
 
