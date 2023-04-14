@@ -11,19 +11,32 @@
     <nav>
         <div></div>
         <ul>
+
             <li>
-                <a href="add.html"><i class="fa-brands fa-google-drive"></i> Upload from Google Drive</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i> Upload from Instagram</a>
-            </li>
-            <li>
-                <a href=""><i class="fa-solid fa-upload"></i> Upload locally</a>
+                <input type="file" id="file" webkitdirectory directory accept="folder image/jpg image/png" multiple />
+                <button onclick="go()">Go</button>
+                <div id="output"</div>
+
+                <script type="text/javascript">
+                    function go() {
+                        const fileInput = document.getElementById('file');
+                        const outputDiv = document.getElementById('output');
+                        let html = '';
+                        for (const file of fileInput.files) {
+                            html += '<img src="image/' + file.name + '" />';
+                        }
+                        outputDiv.DOCUMENT_POSITION_FOLLOWING = html;
+                    }
+                </script>
             </li>
             <li>
                 <a href="index.html"><i class="fa-solid fa-rotate-left"></i> Back</a>
             </li>
+
+
+          
         </ul>
     </nav>
+    <script src="script.js"></script>
 </body>
 </html>
